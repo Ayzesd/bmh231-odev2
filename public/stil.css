@@ -1,0 +1,189 @@
+:root {
+  --ana-renk: #1d4ed8;
+  --koyu-renk: #172554;
+  --acik-renk: #eff6ff;
+  --metin: #1f2937;
+  --kenar: #dbe3ef;
+  --golge: 0 4px 14px rgba(23, 37, 84, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--metin);
+  background: #f8fafc;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 7%;
+  color: white;
+  background: var(--koyu-renk);
+}
+
+.logo, nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+main {
+  width: min(1100px, 90%);
+  margin: auto;
+}
+
+.hero {
+  padding: 70px 0 45px;
+}
+
+.etiket {
+  color: var(--ana-renk);
+  font-weight: bold;
+}
+
+h1, h2 {
+  color: var(--koyu-renk);
+}
+
+h1 {
+  margin: 8px 0;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.section {
+  padding: 30px 0 55px;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--kenar);
+  border-radius: 6px;
+  font: inherit;
+}
+
+.filtreler {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font: inherit;
+}
+
+.filtre {
+  color: var(--koyu-renk);
+  background: #dbeafe;
+}
+
+.filtre.secili, .ana-buton {
+  color: white;
+  background: var(--ana-renk);
+}
+
+.etkinlik-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.kart {
+  padding: 20px;
+  background: white;
+  border: 1px solid var(--kenar);
+  border-radius: 10px;
+  box-shadow: var(--golge);
+}
+
+.kart h3 {
+  margin-top: 0;
+  color: var(--koyu-renk);
+}
+
+.kart p {
+  margin: 8px 0;
+}
+
+.tur {
+  display: inline-block;
+  padding: 3px 8px;
+  color: var(--ana-renk);
+  background: var(--acik-renk);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.form-section {
+  max-width: 650px;
+}
+
+.form-grup {
+  margin-bottom: 14px;
+}
+
+.hata {
+  min-height: 1.4em;
+  margin: 3px 0;
+  color: #b91c1c;
+}
+
+.input-hata {
+  border: 2px solid #b91c1c;
+}
+
+.basari {
+  color: #166534;
+  font-weight: bold;
+}
+
+footer {
+  padding: 25px 7%;
+  color: white;
+  text-align: center;
+  background: var(--koyu-renk);
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  .hero {
+    padding-top: 40px;
+  }
+}

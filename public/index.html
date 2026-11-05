@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kampüs Etkinlik Panosu</title>
+  <link rel="stylesheet" href="/stil.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="/">Kampüs Panosu</a>
+    <nav aria-label="Ana menü">
+      <a href="#etkinlikler">Etkinlikler</a>
+      <a href="#oner">Etkinlik Öner</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="ana-baslik">
+      <p class="etiket">Yozgat Bozok Üniversitesi</p>
+      <h1 id="ana-baslik">Kampüs Etkinlik Panosu</h1>
+      <p>Kampüsteki atölye, söyleşi ve topluluk etkinliklerini keşfet.</p>
+    </section>
+
+    <section id="etkinlikler" class="section" aria-labelledby="etkinlik-baslik">
+      <h2 id="etkinlik-baslik">Yaklaşan Etkinlikler</h2>
+      <label for="arama">Etkinliklerde ara</label>
+      <input id="arama" type="search" placeholder="Başlık, yer veya tür ara...">
+      <div class="filtreler" aria-label="Etkinlik türü filtreleri">
+        <button class="filtre secili" type="button" data-tur="tumu">Tümü</button>
+        <button class="filtre" type="button" data-tur="atolye">Atölye</button>
+        <button class="filtre" type="button" data-tur="soylesi">Söyleşi</button>
+        <button class="filtre" type="button" data-tur="topluluk">Topluluk</button>
+      </div>
+      <p id="durum" class="durum" aria-live="polite">Etkinlikler yükleniyor...</p>
+      <div id="etkinlik-listesi" class="etkinlik-grid"></div>
+    </section>
+
+    <section id="oner" class="section form-section" aria-labelledby="form-baslik">
+      <h2 id="form-baslik">Etkinlik Öner</h2>
+      <form id="etkinlik-form" novalidate>
+        <div class="form-grup">
+          <label for="etkinlik-adi">Etkinlik adı</label>
+          <input id="etkinlik-adi" name="etkinlikAdi" type="text" required>
+          <p id="etkinlik-adi-hata" class="hata"></p>
+        </div>
+        <div class="form-grup">
+          <label for="etkinlik-tarihi">Etkinlik tarihi</label>
+          <input id="etkinlik-tarihi" name="etkinlikTarihi" type="date" required>
+          <p id="etkinlik-tarihi-hata" class="hata"></p>
+        </div>
+        <div class="form-grup">
+          <label for="eposta">E-posta</label>
+          <input id="eposta" name="eposta" type="email" required>
+          <p id="eposta-hata" class="hata"></p>
+        </div>
+        <button class="ana-buton" type="submit">Öneriyi Gönder</button>
+        <p id="form-mesaji" class="basari" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>BMH231 Web Programlama - Bedirhan Çiftçi</p>
+  </footer>
+  <script src="/betik.js"></script>
+</body>
+</html>
